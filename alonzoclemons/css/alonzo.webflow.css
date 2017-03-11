@@ -961,8 +961,7 @@ html.w-mod-js *[data-ix="right-to-left-title"] {
   .logo.w--current {
     display: block;
     width: 300px;
-    margin-right: auto;
-    margin-left: auto;
+    padding-left: 0px;
   }
   .hero-container.homepage-hero {
     height: 100%;
@@ -1044,6 +1043,9 @@ html.w-mod-js *[data-ix="right-to-left-title"] {
   }
   .gallery-column {
     margin-bottom: 20px;
+  }
+  .latestnews-section {
+    margin-top: 20px;
   }
   .thumbnail-h4 {
     font-size: 17px;
