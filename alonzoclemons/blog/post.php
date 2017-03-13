@@ -3,33 +3,67 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<?php perch_blog_post_meta(perch_get('s')); ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php" />
-	<?php perch_get_css(); ?>
-	<link rel="stylesheet" href="blog.css" type="text/css" />
-</head>
-<body>
-	<header class="layout-header">
-		<div class="wrapper">
-			<div class="company-name">Perch Blog App - Company Name</div>
-			<img src="<?php perch_path('feathers/quill/img/logo.gif'); ?>" alt="Your Logo Here" class="logo"/>
-		</div>
-		<nav class="main-nav">
-			<?php perch_pages_navigation(array(
-					'levels'=>1
-				));
-			?>
-		</nav>
-	</header>
-
-	<!--  change cols2-nav-right to cols2-nav-left if you want the sidebar on the left -->
-	<div class="wrapper cols2-nav-right">
-
-		<div class="primary-content">
-
-
-		    <div class="post">
+	<title><?php perch_blog_post_meta(perch_get('s')); ?> | Alonzo News</title>
+	  <meta content="Alonzo News" property="og:title">
+	  <meta content="width=device-width, initial-scale=1" name="viewport">
+	  <meta content="Webflow" name="generator">
+	  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+	  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+	  <link href="../css/alonzo.webflow.css" rel="stylesheet" type="text/css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+	  <script type="text/javascript">
+	    WebFont.load({
+	      google: {
+	        families: ["Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Merriweather:300,300italic,400,400italic,700,700italic,900,900italic"]
+	      }
+	    });
+	  </script>
+	  <script src="../js/modernizr.js" type="text/javascript"></script>
+	  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+	</head>
+	<body class="body">
+	  <header class="header w-container" id="header">
+	    <div class="w-row">
+	      <div class="w-col w-col-6">
+	        <a class="logo w-nav-brand" href="index.html"><img class="logo-img" src="../images/logo.svg">
+	        </a>
+	      </div>
+	      <div class="w-col w-col-6">
+	        <div class="social-links w-clearfix">
+	          <a class="facebook w-clearfix w-inline-block" href="https://www.facebook.com/AlonzoClemmonsA/" target="_blank"><img height="30" src="../images/1486970579_facebook_circle.svg" width="30">
+	            <div class="facebook-text-link social-text-link">Facebook</div>
+	          </a>
+	          <a class="w-clearfix w-inline-block youtube" href="https://www.youtube.com/results?search_query=alonzo+clemons" target="_blank"><img class="youtube-icon" height="30" src="../images/1486970596_youtube_circle.png" width="30">
+	            <div class="social-text-link youtube-text-link">YouTube</div>
+	          </a>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="navbar w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease-in" data-easing2="ease-out">
+	      <div class="nav w-container">
+	        <nav class="navmenu w-nav-menu" role="navigation"><a class="navlink w-nav-link" href="index.html">Home</a>
+	          <div class="w-dropdown" data-delay="100" data-hover="1">
+	            <div class="dropdown w-dropdown-toggle">
+	              <div class="navlink works-dropdown" data-ix="test">Works</div>
+	            </div>
+	            <nav class="dropdown-list w-dropdown-list"><a class="dropdown-link w-dropdown-link" href="sculptures-for-sale.html">Sculptures For Sale</a><a class="dropdown-link w-dropdown-link" href="oil-pastels-for-sale.html">Oil Pastels For Sale</a><a class="dropdown-link w-dropdown-link" href="past-works.html">Past Works</a>
+	            </nav>
+	          </div><a class="navlink w-nav-link" href="about.html">About Alonzo</a><a class="navlink w-nav-link" href="savant-syndrome.html">Savant Syndrome</a><a class="navlink w-nav-link" href="videos.html">Videos</a><a class="navlink w-nav-link" href="alonzo-news.html">Alonzo News</a><a class="navlink w-nav-link" href="contact.html">Contact</a>
+	        </nav>
+	        <div class="menu-button w-nav-button">
+	          <div class="hamburger-icon w-icon-nav-menu"></div>
+	        </div>
+	      </div>
+	    </div>
+	  </header>
+	  <div class="hero-section">
+	    <div class="hero-container news-hero w-container">
+	      <h2 class="hero news" data-ix="right-to-left-title">Alonzo's News</h2>
+	    </div>
+	  </div>
+	  <div class="content">
+	    <div class="about-container w-container">
 		    	<?php perch_blog_post(perch_get('s')); ?>
 
 		    	<?php perch_blog_author_for_post(perch_get('s')); ?>
@@ -48,39 +82,34 @@
 		    	<?php perch_blog_post_comment_form(perch_get('s')); ?>
 
 		    </div>
-		</div>
-
-		<nav class="sidebar">
-		    <h2>Archive</h2>
-		    <!-- The following functions are different ways to display archives. You can use any or all of these.
-
-		    All of these functions can take a parameter of a template to overwrite the default template, for example:
-
-		    perch_blog_categories('my_template.html');
-
-		    -->
-		    <!--  By category listing -->
-		    <?php perch_blog_categories(); ?>
-		    <!--  By tag -->
-		    <?php perch_blog_tags(); ?>
-		    <!--  By year -->
-		    <?php perch_blog_date_archive_years(); ?>
-		    <!--  By year and then month - can take parameters for two templates. The first displays the years and the second the months see the default templates for examples -->
-		    <?php perch_blog_date_archive_months(); ?>
-    	</nav>
-	</div>
-	<footer class="layout-footer">
-		<div class="wrapper">
-			<ul class="social-links">
-				<li class="twitter"><a href="#" rel="me">Twitter</a></li>
-				<li class="facebook"><a href="#" rel="me">Facebook</a></li>
-				<li class="flickr"><a href="#" rel="me">Flickr</a></li>
-				<li class="linkedin"><a href="#" rel="me">LinkedIn</a></li>
-				<li class="rss"><a href="#">RSS</a></li>
-			</ul>
-			<small>Copyright &copy; <?php echo date('Y'); ?></small>
-		</div>
-	</footer>
-	<?php perch_get_javascript(); ?>
+  		</div>
+  <footer class="footer">
+    <div class="w-container">
+      <div class="footer-divblock">
+        <div class="footer-text">Alonzo Clemons &nbsp; - &nbsp;Copyright 2017 &nbsp;- &nbsp;Created with&nbsp;</div><img class="herat" height="20" src="../images/heart.svg" width="20">
+        <div class="footer-text">&nbsp;by Brennan Smith</div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.css">
+  <script>
+    // Show the progress bar 
+    NProgress.start();
+    // Increase randomly
+    var interval = setInterval(function() { NProgress.inc(); }, 1000);        
+    // Trigger finish when page fully loaded
+    jQuery(window).load(function () {
+        clearInterval(interval);
+        NProgress.done();
+    });
+    // Trigger bar when exiting the page
+    jQuery(window).unload(function () {
+        NProgress.start();
+    });
+  </script>
 </body>
 </html>

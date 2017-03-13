@@ -3,5 +3,6 @@
 		'content', 
 		'categories',
 		'perch_blog',
+		'perch_gallery'
 	);
 ?>
