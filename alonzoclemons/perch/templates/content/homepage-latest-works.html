@@ -1,0 +1,22 @@
+<div class="gallery-column w-col w-col-6">
+    <div class="gallery-div-block">
+        <a class="w-inline-block w-lightbox" href="#">
+        <img src="<perch:content id="galleryimagethumb" type="image" label="Gallery Image Thumbnail" />" alt="<perch:content id="title" type="text" label="Title" required="true" />" />
+          <script class="w-json" type="application/json">
+            { "items": [{
+              "type": "image",
+              "_id": "588d4ca56566e5217f1b2752",
+              "fileName": "<perch:content id="galleryimage" type="image" label="Large Gallery Image" />",
+              "origFileName": "<perch:content id="galleryimage" type="image" label="Large Gallery Image" />",
+              "width": 600,
+              "height": 432,
+              "fileSize": 58832,
+              "url": "<perch:content id="galleryimage" type="image" label="Large Gallery Image" />"
+            }] }
+          </script>
+        </a>
+        <h3 class="gallery-h3"><perch:content id="title" type="text" label="Title" required="true" /></h3>
+        <div class="gallery-description"><perch:content id="description" type="text" label="Description" required="true" help="Dimensions of the piece"/></div>
+        <div class="gallery-price"><perch:content id="galleryprice" type="text" label="Gallery Price" required="true" /></div>
+    </div>
+</div>

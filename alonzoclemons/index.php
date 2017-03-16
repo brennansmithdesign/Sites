@@ -103,56 +103,16 @@
         </div>
       </div>
       <div class="latestworks-row w-row">
-        <div class="gallery-column w-col w-col-6">
-          <div class="gallery-div-block">
-            <a class="w-inline-block w-lightbox" href="#"><img alt="Legacy Lion" src="images/lyons-lion-th.jpg">
-              <script class="w-json" type="application/json">
-                { "items": [{
-                  "type": "image",
-                  "_id": "588d4ca56566e5217f1b2752",
-                  "fileName": "lyons-lion.jpg",
-                  "origFileName": "lyons-lion.jpg",
-                  "width": 600,
-                  "height": 432,
-                  "fileSize": 58832,
-                  "url": "images/lyons-lion.jpg"
-                }] }
-              </script>
-            </a>
-            <h3 class="gallery-h3">Legacy Lion</h3>
-            <div class="gallery-description">16.5" Long, 12" High, 6" Deep</div>
-            <div class="gallery-price">Inquiries Welcome</div>
-          </div>
-        </div>
-        <div class="gallery-column w-col w-col-6">
-          <div class="gallery-div-block">
-            <a class="w-inline-block w-lightbox" href="#"><img alt="Wake Up" src="images/wake-up-th.jpg">
-              <script class="w-json" type="application/json">
-                { "items": [{
-                  "type": "image",
-                  "_id": "588d49b0e39b1da106c88d51",
-                  "fileName": "wake-up.jpg",
-                  "origFileName": "wake-up.jpg",
-                  "width": 722,
-                  "height": 561,
-                  "fileSize": 84751,
-                  "url": "images/wake-up.jpg"
-                }] }
-              </script>
-            </a>
-            <h3 class="gallery-h3">Wake Up</h3>
-            <div class="gallery-description">6″ long x 3.5″ high x 5″ deep</div>
-            <div class="gallery-price">$300</div>
-          </div>
-        </div>
+            <?php perch_content('Latest Works 1'); ?>
+            <?php perch_content('Latest Works 2'); ?>
       </div>
     </div>
   </section>
   <article class="latestnews-section">
     <div class="w-container">
-      <?php perch_content('Latest Showing'); ?>
+        <h2>Current Showings</h2>
+        <?php perch_content('Latest Showing Homepage'); ?>
       </div>
-    </div>
   </article>
   <footer class="footer">
     <div class="w-container">
