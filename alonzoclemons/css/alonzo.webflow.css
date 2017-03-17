@@ -57,20 +57,12 @@ p {
 
 a {
   color: #005e86;
-  font-weight: 700;
   text-decoration: none;
 }
 
 ul {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  padding-left: 40px;
-  border: 1px solid #b1e8ff;
-  background-color: #e6f7ff;
-  font-family: Lato, sans-serif;
-  color: #777;
-  font-size: 16px;
-  line-height: 40px;
+list-style-type: none;
+padding-left: 0;
 }
 
 li {
@@ -234,6 +226,18 @@ figcaption {
   margin-top: 0px;
   margin-left: 0px;
   float: none;
+}
+
+ul.works-cited {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 40px;
+  border: 1px solid #b1e8ff;
+  background-color: #e6f7ff;
+  font-family: Lato, sans-serif;
+  color: #777;
+  font-size: 16px;
+  line-height: 40px;
 }
 
 .hero.contact {

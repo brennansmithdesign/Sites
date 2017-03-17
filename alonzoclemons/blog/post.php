@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title><?php perch_blog_post_meta(perch_get('s')); ?> | Alonzo News</title>
+	<title><?php perch_blog_post_field(perch_get('s'), 'postTitle'); ?> | Alonzo News</title>
 	  <meta content="Alonzo News" property="og:title">
 	  <meta content="width=device-width, initial-scale=1" name="viewport">
 	  <meta content="Webflow" name="generator">
@@ -64,24 +64,8 @@
 	  </div>
 	  <div class="content">
 	    <div class="about-container w-container">
-		    	<?php perch_blog_post(perch_get('s')); ?>
-
-		    	<?php perch_blog_author_for_post(perch_get('s')); ?>
-
-		    	<div class="meta">
-		            <div class="cats">
-		                <?php perch_blog_post_categories(perch_get('s')); ?>
-		            </div>
-		            <div class="tags">
-		                <?php perch_blog_post_tags(perch_get('s')); ?>
-		            </div>
-		        </div>
-
-		    	<?php perch_blog_post_comments(perch_get('s')); ?>
-
-		    	<?php perch_blog_post_comment_form(perch_get('s')); ?>
-
-		    </div>
+            <?php perch_blog_post(perch_get('s')); ?>
+        </div>
   		</div>
   <footer class="footer">
     <div class="w-container">

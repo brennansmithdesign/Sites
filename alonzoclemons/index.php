@@ -111,7 +111,14 @@
   <article class="latestnews-section">
     <div class="w-container">
         <h2>Current Showings</h2>
-        <?php perch_content('Latest Showing Homepage'); ?>
+        <?php
+        perch_blog_custom(array(
+          'sort'=>'postDateTime',
+          'sort-order'=>'DESC',
+          'template'=>'blog/homepage_post_in_list.html',
+          'count'=>1
+        )); ?>
+        <!-- <?php perch_content('Latest Showing Homepage'); ?> -->
       </div>
   </article>
   <footer class="footer">
